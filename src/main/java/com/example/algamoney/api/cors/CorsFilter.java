@@ -27,15 +27,15 @@ public class CorsFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {		
-		//alteracao
-		HttpServletRequest request = (HttpServletRequest) req;
+		
+		HttpServletRequest requestx = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
 		
 		response.setHeader("Access-Control-Allow-Origin", algamoneyApiProperty.getOriginPermitida());
         response.setHeader("Access-Control-Allow-Credentials", "true");
         
-		if ("OPTIONS".equals(request.getMethod())&& 
-				algamoneyApiProperty.getOriginPermitida().equals(request.getHeader("Origin"))) {
+		if ("OPTIONS".equals(requestx.getMethod())&& 
+				algamoneyApiProperty.getOriginPermitida().equals(requestx.getHeader("Origin"))) {
 			
 			response.setHeader("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT, OPTIONS");
         	response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Accept");
