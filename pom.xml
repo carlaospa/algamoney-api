@@ -51,14 +51,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
-		<!-- Migracoes - Flyway 
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-		</dependency>
-		-->
-		
+		 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-java8</artifactId>
@@ -67,7 +60,7 @@
 		<dependency>
     		<groupId>org.flywaydb</groupId>
     		<artifactId>flyway-maven-plugin</artifactId>
-    		<version>5.2.1</version>
+    		<version>5.2.4</version>
     	</dependency>  
     	
     	<dependency>
